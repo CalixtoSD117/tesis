@@ -22,10 +22,19 @@ import { RiHome6Line,
   import { useState } from "react";
   import { Link } from "react-router-dom";
   import { Outlet } from "react-router-dom";
-  
+  import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
   
   
   const Dashboard = () => {
+
+    const mapStyles = {        
+        height: "100vh",
+        width: "100%"};
+      
+      const defaultCenter = {
+        lat: 41.3851, lng: 2.1734
+      }
+    
     const [showMenu, setShowMenu] = useState(false);
   
       const toggleMenu = () => {
@@ -93,7 +102,7 @@ import { RiHome6Line,
           </button>
   
           {/* Header */}
-          <header className="fixed bg-gray-100 shadow-md w-full lg:w-[calc(100%-285px)] lg:ml-[285px] flex flex-col md:flex-row items-center justify-between gap-4 p-2">
+          <header className="fixed bg-gray-100 shadow-md w-full z-50 lg:w-[calc(100%-285px)] lg:ml-[285px] flex flex-col md:flex-row items-center justify-between gap-4 p-2">
               <div className="order-1 md:order-none">
                   <div className="relative">
                       <h1 className="text-3xl font-semibold">Dashboard</h1>
@@ -153,20 +162,25 @@ import { RiHome6Line,
           {/* Main */}
   
           <main className="lg:pl-[285px] pt-36 md:pt-24 lg:pt-28">
-              <div className="bg-slate-100 pl-2 pr-2">
-              <h1 className="text-center text-3xl font-semibold">Bienvenido</h1>
-              <p className="text-justify pt-4 pb-4 ">Esta será la aplicación donde usted podrá monitorear cada uno de los contenedores que tenga, 
-                  podra observar cada  uno de los cambios que se realicen en los patios del puerto.
-              </p>
-              <p className="font-bold pb-4">Version: 1.0</p>
-              </div>
-  
-              <div className="bg-slate-100 pl-2 pr-2 mt-8">
-              <h1 className="text-center text-3xl font-semibold">Novedades</h1>
-              <h3 className="pt-4 pb-4"><span className="font-bold">Ubicacion:</span> Se añadieron funcionalidades de ver en tiempo real los contenedores.</h3>
-              <h3 className="pt-4 pb-4"><span className="font-bold">Alertas:</span> Se añadieron funcionalidades de ver en tiempo real los contenedores.</h3>
-              <h3 className="pt-4 pb-4"><span className="font-bold">Reportes:</span> podrás crear reportes de cada uno de los sucesos que te resulten importantes.</h3>
-              </div>
+            <div className="flex">
+
+            <div className="w-full p-8">
+            <LoadScript
+
+            googleMapsApiKey="AIzaSyB912pXLDOGB1PyJI5Q6hDzBGit3p-S-M4">
+
+            <GoogleMap
+            mapContainerStyle={mapStyles}
+            zoom={13}
+            center={defaultCenter}
+            />
+
+            </LoadScript>
+            </div>
+
+
+            </div>
+            
   
               
           </main>
@@ -175,5 +189,7 @@ import { RiHome6Line,
       </div>
     )
   }
+
+ 
   
   export default Dashboard
