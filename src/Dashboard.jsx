@@ -22,7 +22,7 @@ import { RiHome6Line,
   import { useState } from "react";
   import { Link } from "react-router-dom";
   import { Outlet } from "react-router-dom";
-  import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+  import { GoogleMap, Marker, LoadScript  } from "@react-google-maps/api";
   
   
   const Dashboard = () => {
@@ -35,6 +35,7 @@ import { RiHome6Line,
         lat: 41.3851, lng: 2.1734
       }
     
+
     const [showMenu, setShowMenu] = useState(false);
   
       const toggleMenu = () => {
@@ -61,12 +62,12 @@ import { RiHome6Line,
                       </li>
                       
                       <li>
-                          <Link to="/dashboard" className="text-white font-semibold flex items-center gap-4 hover:bg-gray-500  transition-colors py-2 px-4 rounded-lg">
+                          <Link to="/dashboard" onClick={window.location} className="text-white font-semibold flex items-center gap-4 hover:bg-gray-500  transition-colors py-2 px-4 rounded-lg">
                               <RiDashboardLine/> Dashboard
                           </Link>
                       </li>
                       <li>
-                          <Link to="/mapa" className="text-white font-semibold flex items-center gap-4 hover:bg-gray-500 transition-colors py-2 px-4 rounded-lg">
+                          <Link to="/mapa"  className="text-white font-semibold flex items-center gap-4 hover:bg-gray-500 transition-colors py-2 px-4 rounded-lg">
                               <RiMap2Line/>Mapa
                           </Link>
                       </li>
@@ -165,17 +166,15 @@ import { RiHome6Line,
             <div className="flex">
 
             <div className="w-full p-8">
-            <LoadScript
-
-            googleMapsApiKey="AIzaSyB912pXLDOGB1PyJI5Q6hDzBGit3p-S-M4">
-
-            <GoogleMap
-            mapContainerStyle={mapStyles}
-            zoom={13}
-            center={defaultCenter}
-            />
-
-            </LoadScript>
+                <LoadScript
+                googleMapsApiKey="AIzaSyB912pXLDOGB1PyJI5Q6hDzBGit3p-S-M4">
+                <GoogleMap
+          mapContainerStyle={mapStyles}
+          zoom={13}
+          center={defaultCenter}
+        />
+                </LoadScript>
+            
             </div>
 
 
@@ -192,4 +191,4 @@ import { RiHome6Line,
 
  
   
-  export default Dashboard
+  export default Dashboard;

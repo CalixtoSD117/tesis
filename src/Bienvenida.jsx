@@ -52,7 +52,7 @@ const Bienvenida = () => {
                     </li>
                     
                     <li>
-                        <Link to="/dashboard" className="text-white font-semibold flex items-center gap-4 hover:bg-gray-500  transition-colors py-2 px-4 rounded-lg">
+                        <Link to="/dashboard" onClick={window.location} className="text-white font-semibold flex items-center gap-4 hover:bg-gray-500  transition-colors py-2 px-4 rounded-lg">
                             <RiDashboardLine/> Dashboard
                         </Link>
                     </li>
