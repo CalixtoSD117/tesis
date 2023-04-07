@@ -28,11 +28,11 @@ import { RiHome6Line,
   const Dashboard = () => {
 
     const mapStyles = {        
-        height: "100vh",
+        height: "80vh",
         width: "100%"};
       
       const defaultCenter = {
-        lat: 41.3851, lng: 2.1734
+        lat: 19.116945, lng:-104.3456304
       }
     
 
@@ -42,7 +42,7 @@ import { RiHome6Line,
           setShowMenu(!showMenu)
       };
     return (
-      <div className="">
+      <div className="bg-slate-50">
       <div className='min-h-screen '>
           {/* Sidebar */}
           <div className={`fixed top-0 w-3/4 lg:left-0 md:w-[285px] h-full bg-dash p-2 flex flex-col justify-between z-50 transition-all
@@ -98,12 +98,12 @@ import { RiHome6Line,
           </div>
   
           {/* Boton menu movil */}
-          <button onClick={toggleMenu} className="lg:hidden fixed bottom-6 right-6 bg-dash p-4 rounded-full ">
+          <button onClick={toggleMenu} className="lg:hidden fixed bottom-6 right-6 bg-dash p-4 rounded-full z-50 ">
               {showMenu ? <RiCloseLine className="text-white"/> : <RiMenuLine className="text-white"/>}
           </button>
   
           {/* Header */}
-          <header className="fixed bg-gray-100 shadow-md w-full z-50 lg:w-[calc(100%-285px)] lg:ml-[285px] flex flex-col md:flex-row items-center justify-between gap-4 p-2">
+          <header className="fixed bg-gray-100 shadow-md w-full z-40 lg:w-[calc(100%-285px)] lg:ml-[285px] flex flex-col md:flex-row items-center justify-between gap-4 p-2">
               <div className="order-1 md:order-none">
                   <div className="relative">
                       <h1 className="text-3xl font-semibold">Dashboard</h1>
@@ -162,24 +162,44 @@ import { RiHome6Line,
           </header>
           {/* Main */}
   
-          <main className="lg:pl-[285px] pt-36 md:pt-24 lg:pt-28">
-            <div className="flex">
+          <main className="lg:pl-[285px] pt-36 md:pt-24 lg:pt-28 ">
+            <div className="pl-8 pr-8 lg:flex items-center justify-center gap-12">
 
-            <div className="w-full p-8">
+            <div className="ring-1 ring-white p-4 rounded-lg bg-white shadow-lg w-full lg:mb-0 mb-4 ">
+                <div>
+                    <h1 className="lg:text-2xl font-bold pb-2 ">Descargar datos:</h1>
+                    <p>Para descargar los datos recopilados en la aplicación solamente de clic al botón de abajo y tendrá un reporte completo de sus contenedores</p>
+                </div>
+                <aside className="flex items-center justify-center pt-2">
+                    <button className="bg-slate-200 p-1 rounded-lg text-md font-semibold px-4 hover:bg-slate-400 transition-colors ease-in-out">
+                        Descargar
+                    </button>
+                </aside>
+            </div>
+
+            <div className="ring-1 ring-white p-4 rounded-lg bg-white shadow-lg w-full" >
+                <div>
+                    <h1 className="text-xl lg:text-2xl font-bold pb-2 ">Dispositivos en Linea:</h1>
+                    <p className="pb-10">Lorem ipsum dolor sit amet consectetur m nostrum exercitationem hic sapiente aperiam, possimus facilis maxime in voluptatibus officia.</p>
+                </div>
+
+            </div>
+
+
+            </div>
+
+            
+            <div className="lg:w-full p-8">
                 <LoadScript
                 googleMapsApiKey="AIzaSyB912pXLDOGB1PyJI5Q6hDzBGit3p-S-M4">
                 <GoogleMap
-          mapContainerStyle={mapStyles}
-          zoom={13}
-          center={defaultCenter}
-        />
+                mapContainerStyle={mapStyles}
+                zoom={13}
+                center={defaultCenter}
+                />
                 </LoadScript>
             
             </div>
-
-
-            </div>
-            
   
               
           </main>
