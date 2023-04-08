@@ -23,6 +23,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import { GoogleMap, Marker, LoadScript  } from "@react-google-maps/api";
+import { Tabla } from "./components";
 
 
 
@@ -41,7 +42,7 @@ const Mapa = () => {
         setShowMenu(!showMenu)
     };
   return (
-    <div className="">
+    <div className="bg-slate-50">
     <div className='min-h-screen'>
         {/* Sidebar */}
         <div className={`fixed top-0 w-3/4 lg:left-0 md:w-[285px] h-full bg-dash p-2 flex flex-col justify-between z-50 transition-all
@@ -163,8 +164,9 @@ const Mapa = () => {
         {/* Main */}
 
         <main className="lg:pl-[285px] pt-36 md:pt-24 lg:pt-28">
+        <div className="pl-8 pr-8">
 
-        <div className="lg:w-full p-8">
+        <div className="lg:w-full ">
                 <LoadScript
                 googleMapsApiKey="AIzaSyB912pXLDOGB1PyJI5Q6hDzBGit3p-S-M4">
                 <GoogleMap
@@ -174,9 +176,15 @@ const Mapa = () => {
                 />
                 </LoadScript>
             
-            </div> 
+        </div>
+        <div className="pt-4 mb-10">
+            <Tabla/>
+        </div> 
+        
 
 
+        </div>
+        
         </main>
         <Outlet/>
     </div>
