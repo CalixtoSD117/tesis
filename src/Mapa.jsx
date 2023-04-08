@@ -22,11 +22,20 @@ import { logotipo_v2, persona1 } from "./assets";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
+import { GoogleMap, Marker, LoadScript  } from "@react-google-maps/api";
 
 
 
 const Mapa = () => {
   const [showMenu, setShowMenu] = useState(false);
+
+  const mapStyles = {        
+    height: "80vh",
+    width: "100%"};
+  
+  const defaultCenter = {
+    lat: 19.116945, lng:-104.3456304
+  }
 
     const toggleMenu = () => {
         setShowMenu(!showMenu)
@@ -57,7 +66,7 @@ const Mapa = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/mapa" className="text-white font-semibold flex items-center gap-4 hover:bg-gray-500 transition-colors py-2 px-4 rounded-lg">
+                        <Link to="/mapa" onClick={window.location} className="text-white font-semibold flex items-center gap-4 hover:bg-gray-500 transition-colors py-2 px-4 rounded-lg">
                             <RiMap2Line/>Mapa
                         </Link>
                     </li>
@@ -88,12 +97,12 @@ const Mapa = () => {
         </div>
 
         {/* Boton menu movil */}
-        <button onClick={toggleMenu} className="lg:hidden fixed bottom-6 right-6 bg-dash p-4 rounded-full ">
+        <button onClick={toggleMenu} className="lg:hidden fixed bottom-6 right-6 bg-dash p-4 rounded-full z-50 ">
             {showMenu ? <RiCloseLine className="text-white"/> : <RiMenuLine className="text-white"/>}
         </button>
 
         {/* Header */}
-        <header className="fixed bg-gray-100 shadow-md w-full lg:w-[calc(100%-285px)] lg:ml-[285px] flex flex-col md:flex-row items-center justify-between gap-4 p-2">
+        <header className="fixed bg-gray-100 shadow-md w-full lg:w-[calc(100%-285px)] lg:ml-[285px] flex flex-col md:flex-row items-center justify-between gap-4 p-2 z-40">
             <div className="order-1 md:order-none">
                 <div className="relative">
                     <h1 className="text-3xl font-semibold">Mapa</h1>
@@ -154,22 +163,20 @@ const Mapa = () => {
         {/* Main */}
 
         <main className="lg:pl-[285px] pt-36 md:pt-24 lg:pt-28">
-            <div className="bg-slate-100 pl-2 pr-2">
-            <h1 className="text-center text-3xl font-semibold">Bienvenido</h1>
-            <p className="text-justify pt-4 pb-4 ">Esta será la aplicación donde usted podrá monitorear cada uno de los contenedores que tenga, 
-                podra observar cada  uno de los cambios que se realicen en los patios del puerto.
-            </p>
-            <p className="font-bold pb-4">Version: 1.0</p>
-            </div>
 
-            <div className="bg-slate-100 pl-2 pr-2 mt-8">
-            <h1 className="text-center text-3xl font-semibold">Novedades</h1>
-            <h3 className="pt-4 pb-4"><span className="font-bold">Ubicacion:</span> Se añadieron funcionalidades de ver en tiempo real los contenedores.</h3>
-            <h3 className="pt-4 pb-4"><span className="font-bold">Alertas:</span> Se añadieron funcionalidades de ver en tiempo real los contenedores.</h3>
-            <h3 className="pt-4 pb-4"><span className="font-bold">Reportes:</span> podrás crear reportes de cada uno de los sucesos que te resulten importantes.</h3>
-            </div>
-
+        <div className="lg:w-full p-8">
+                <LoadScript
+                googleMapsApiKey="AIzaSyB912pXLDOGB1PyJI5Q6hDzBGit3p-S-M4">
+                <GoogleMap
+                mapContainerStyle={mapStyles}
+                zoom={13}
+                center={defaultCenter}
+                />
+                </LoadScript>
             
+            </div> 
+
+
         </main>
         <Outlet/>
     </div>

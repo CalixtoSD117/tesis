@@ -67,7 +67,7 @@ import { RiHome6Line,
                           </Link>
                       </li>
                       <li>
-                          <Link to="/mapa"  className="text-white font-semibold flex items-center gap-4 hover:bg-gray-500 transition-colors py-2 px-4 rounded-lg">
+                          <Link to="/mapa" onClick={window.location}  className="text-white font-semibold flex items-center gap-4 hover:bg-gray-500 transition-colors py-2 px-4 rounded-lg">
                               <RiMap2Line/>Mapa
                           </Link>
                       </li>
@@ -176,15 +176,17 @@ import { RiHome6Line,
                     </button>
                 </aside>
             </div>
-
-            <div className="ring-1 ring-white p-4 rounded-lg bg-white shadow-lg w-full" >
+            <Link to="/mapa" onClick={window.location} className="w-full">
+            <div className="bg-white shadow-lg ring-1 ring-white p-4 rounded-lg   w-full"  >
                 <div>
-                    <h1 className="text-xl lg:text-2xl font-bold pb-2 ">Dispositivos en Linea:</h1>
-                    <p className="pb-10">Lorem ipsum dolor sit amet consectetur m nostrum exercitationem hic sapiente aperiam, possimus facilis maxime in voluptatibus officia.</p>
+                    <h1 className="text-xl lg:text-2xl font-bold pb-2 ">Dispositivos</h1>
+                    <p className="pb-5">En linea: </p>
+                    <p className="pb-5">No en linea: </p>
+                    <br />
                 </div>
 
             </div>
-
+            </Link>
 
             </div>
 
