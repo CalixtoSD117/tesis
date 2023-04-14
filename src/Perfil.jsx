@@ -64,7 +64,7 @@ const Perfil = () => {
                     </li>
                     <li>
                         <Link to="/alertas" className="text-white font-semibold flex items-center gap-4 hover:bg-gray-500 transition-colors py-2 px-4 rounded-lg">
-                            <RiAlertLine/>Alertas
+                            <RiAlertLine/>Alertas y Mas
                         </Link>
                     </li>
                     <li>
