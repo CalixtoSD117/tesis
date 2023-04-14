@@ -15,12 +15,12 @@ const App = () => {
       <Routes>
         <Route>
           <Route path="/" element={<Loginp/>} />
-            <Route path="bienvenida" element={<Bienvenida/>} />
-            <Route path="dashboard" element={<Dashboard/>} />
-            <Route path="mapa" element={<Mapa/>} />
-            <Route path="alertas" element={<Alertas/>} />
-            <Route path="reportes" element={<Reportes/>} />
-            <Route path="perfil" element={<Perfil/>} />
+            <Route path="/bienvenida" element={<Bienvenida/>} />
+            <Route path="/dashboard" element={<Dashboard/>} />
+            <Route path="/mapa" element={<Mapa/>} />
+            <Route path="/alertas" element={<Alertas/>} />
+            <Route path="/reportes" element={<Reportes/>} />
+            <Route path="/perfil" element={<Perfil/>} />
         </Route>
       </Routes>
     </div>

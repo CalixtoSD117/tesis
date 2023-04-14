@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { logotipo_v2 } from "./assets"
 import { RiMailLine, RiLock2Fill } from 'react-icons/ri'
 
@@ -44,12 +45,14 @@ const Loginp = () =>
             </div>
             <div>
               {/* Botón de inicio de sesión */}
+              <Link to="/bienvenida">
               <button
                 type="submit"
                 className="w-full bg-blue-500 py-2 px-4 text-white rounded-md hover:bg-blue-600 transition-colors"
               >
                 Iniciar sesión
               </button>
+              </Link>
             </div>
           </form>
           <span className="text-black flex items-center justify-center gap-2 rounded-lg mt-5" >
