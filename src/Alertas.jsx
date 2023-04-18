@@ -24,7 +24,7 @@ import { logotipo_v2, persona1 } from "./assets";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
-import { TablaAlerts } from "./components";
+import { CardBat, CardTemp, TablaAlerts } from "./components";
 
 
 
@@ -36,6 +36,9 @@ const Alertas = () =>
     {
         setShowMenu(!showMenu)
     };
+
+    const Battery = 85; 
+    const temperature = 25;
     return (
         <div className="bg-slate-100">
             <div className='min-h-screen '>
@@ -157,24 +160,16 @@ const Alertas = () =>
                 </header>
                 {/* Main */}
 
-                <main className="lg:pl-[285px] pt-36 md:pt-24 lg:pt-28">
+                <main className="lg:pl-[285px] pt-36 md:pt-24 lg:pt-28 pb-20">
                     <div className="pl-8 pr-8 lg:flex items-center justify-center gap-12">
 
                         <div className="ring-1 ring-white p-4 rounded-lg bg-white shadow-lg w-full lg:mb-0 mb-4 h-48 ">
-                        <div className="text-center">
-                                <h1 className="text-2xl font-semibold">Bateria</h1>
-
-                                <h2 className="mt-10 text-xl">100%</h2>
-                            </div>
+                        <CardBat Battery={Battery}/>
                         </div>
 
                        
                         <div className="bg-white shadow-lg ring-1 ring-white p-4 rounded-lg  w-full h-48"  >
-                            <div className="text-center">
-                                <h1 className="text-2xl font-semibold">Temperatura</h1>
-
-                                <h2 className="mt-10 text-xl">22°C</h2>
-                            </div>
+                            <CardTemp temperature={temperature}/>
 
                         </div>
                        
@@ -184,7 +179,13 @@ const Alertas = () =>
                         <div className="pt-4 mb-10">
                             <TablaAlerts />
                         </div>
+
+
+
+                        
                     </div>
+
+                    
 
                 </main>
                 <Outlet />

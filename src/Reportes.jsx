@@ -19,6 +19,8 @@ import
     RiLogoutBoxLine,
     RiSettings4Line,
     RiDeleteBin6Line,
+    RiDraftLine,
+    RiCloseCircleLine,
 } from "react-icons/ri";
 import { Menu, Transition } from '@headlessui/react'
 import { logotipo_v2, persona1 } from "./assets";
@@ -160,7 +162,7 @@ const Reportes = () =>
                 <main className="lg:pl-[285px] pt-36 md:pt-24 lg:pt-28 pb-10">
 
                     <div className="mr-8 ml-8">
-                        <form className=" p-2 rounded-lg bg-white lg:h-72 lg:flex lg:flex-col justify-center">
+                        <form className=" p-2 pt-5 rounded-lg bg-white lg:h-auto lg:flex lg:flex-col justify-center">
                             <div className="lg:flex lg:flex-row flex flex-col items-center gap-4">
                                 <div className="flex justify-between lg:justify-center items-center gap-2 w-full">
                                     <label htmlFor="" className="font-medium">Titulo</label>
@@ -178,6 +180,17 @@ const Reportes = () =>
                             <aside className="flex flex-col justify-center gap-2 mt-10">
                                 <label htmlFor="message" className="block font-medium">Reporte</label>
                                 <textarea id="message" name="message" rows="3" className="h-32 mt-2 block ring-1 ring-gray-400 text-sm w-full rounded-md pl-3 shadow-sm outline-none focus:border-gray-400 focus:ring-[0.5px]"></textarea>
+                            </aside>
+
+                            <aside className="mt-2 mb-2 flex justify-end gap-2">
+                                <button className="bg-yellow-500 p-2 rounded-xl hover:animate-pulse hover:bg-yellow-600 ">
+                                    <span className="text-white flex items-center gap-2 justify-center"><RiCloseCircleLine/>Eliminar</span>
+                                </button>
+
+                                <button className="bg-blue-600 p-2 rounded-xl hover:animate-pulse hover:bg-blue-700">
+                                    <span className="text-white flex items-center gap-2 justify-center"><RiDraftLine/>Generar</span>
+                                </button>
+
                             </aside>
                         </form>
 
