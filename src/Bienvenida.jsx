@@ -39,7 +39,7 @@ const Bienvenida = () => {
         ${showMenu ? "left-0" : "-left-full"}`}>
             <div>
                 
-                <h1 className=' flex items-center gap-4 text-lg lg:text-2xl uppercase mb-4 text-white font-semibold'>
+                <h1 className=' flex items-center gap-4 text-lg lg:text-xl uppercase mb-4 text-white font-semibold'>
                     <img className="w-9 h-9 lg:w-10 lg:h-10" src={logotipo_v2} alt="" />
                     ContentLocator
                 </h1>
@@ -76,7 +76,7 @@ const Bienvenida = () => {
             {/* Creacion de img abajo  */}
             
             
-            <div className="flex items-center gap-4">
+            <div className="flex ml-4 items-center gap-4">
                 
                 <img src={persona1} alt="example" 
                 className="w-8 h-8 object-cover rounded-full ring-4 ring-blue-500 " />
