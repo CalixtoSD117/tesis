@@ -5,6 +5,7 @@ const CardTemp = ({temperature }) => {
   const strokeWidth = 10;
   const circumference = 2 * Math.PI * radius;
   const offset = circumference - (temperature / 100) * circumference;
+  const stroke = temperature >= 30 ? '#EA1239':'#1285EA'
   return (
     <div className=' flex flex-col items-center justify-center'>
         <div>
@@ -22,7 +23,7 @@ const CardTemp = ({temperature }) => {
           />
           <circle
             className="progress-ring__circle"
-            stroke="#3b82f6"
+            stroke={stroke}
             strokeWidth={strokeWidth}
             fill="transparent"
             r={radius}

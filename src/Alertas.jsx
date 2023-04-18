@@ -37,8 +37,8 @@ const Alertas = () =>
         setShowMenu(!showMenu)
     };
 
-    const Battery = 85; 
-    const temperature = 25;
+    const Battery = 20; 
+    const temperature = 30;
     return (
         <div className="bg-slate-100">
             <div className='min-h-screen '>
