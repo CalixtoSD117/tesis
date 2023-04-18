@@ -183,8 +183,8 @@ const Reportes = () =>
                             </aside>
 
                             <aside className="mt-2 mb-2 flex justify-end gap-2">
-                                <button className="bg-yellow-500 p-2 rounded-xl hover:animate-pulse hover:bg-yellow-600 ">
-                                    <span className="text-white flex items-center gap-2 justify-center"><RiCloseCircleLine/>Eliminar</span>
+                                <button className="bg-[#EAEAEA] p-2 rounded-xl hover:animate-pulse hover:bg-[#CFCFCF] ">
+                                    <span className="text-black flex items-center gap-2 justify-center"><RiCloseCircleLine/>Eliminar</span>
                                 </button>
 
                                 <button className="bg-blue-600 p-2 rounded-xl hover:animate-pulse hover:bg-blue-700">
@@ -222,7 +222,7 @@ const Reportes = () =>
                                         </div>
 
 
-                                        <button className="rounded-lg lg:block hidden text-white bg-red-500 p-1 font-medium hover:bg-red-600 hover:shadow-lg hover:animate-pulse hover:font-bold">
+                                        <button className="rounded-lg lg:block hidden text-white bg-gray-400 p-1 font-medium hover:bg-gray-500 hover:shadow-lg hover:animate-pulse hover:font-bold">
                                             <RiDeleteBin6Line />
                                         </button>
 
@@ -235,7 +235,7 @@ const Reportes = () =>
                                                 <span className="text-lg">Contenedor H1 movido</span>
                                             </div>
                                             <div className="m-0 p-0">
-                                                <button className="rounded-lg text-white bg-red-500 p-1 font-medium hover:bg-red-600 hover:shadow-lg hover:animate-pulse hover:font-bold">
+                                                <button className="rounded-lg text-white bg-gray-400 p-1 font-medium hover:bg-gray-500 hover:shadow-lg hover:animate-pulse hover:font-bold">
                                                     <RiDeleteBin6Line />
                                                 </button>
                                             </div>

@@ -17,13 +17,13 @@ const TablaAlerts = ({Id,Estado,Ubicacion,Dis,Temp,Bat}) => {
         </thead>
         <tbody className='text-center'>
 
-            <tr className='cursor-pointer'>
+            <tr className='cursor-pointer border divide-x'>
             <td>{Id}</td>
             <td>{Estado}</td>
             <td>{Ubicacion}</td>
             <td>{Dis}</td>
-            <td>{Temp}</td>
-            <td>{Bat}</td>
+            <td>{Temp}°C</td>
+            <td>{Bat}%</td>
             </tr>
 
             <tr className='cursor-pointer'>

@@ -37,8 +37,8 @@ const Alertas = () =>
         setShowMenu(!showMenu)
     };
 
-    const Battery = 20; 
-    const temperature = 30;
+    const Battery = 55; 
+    const temperature = 10;
     return (
         <div className="bg-slate-100">
             <div className='min-h-screen '>
@@ -177,7 +177,7 @@ const Alertas = () =>
                     </div>
                     <div className="pl-8 pr-8">
                         <div className="pt-4 mb-10">
-                            <TablaAlerts />
+                            <TablaAlerts Temp={temperature} Bat={Battery} Ubicacion="San pedrito" Id="1" Estado="Activo" Dis="Conectado"/>
                         </div>
 
 
