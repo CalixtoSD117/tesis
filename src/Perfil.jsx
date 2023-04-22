@@ -13,11 +13,11 @@ const Perfil = () => {
         <Sidebar/>
         {/* header */}
 
-        <Header/>
+        <Header title="Perfil"/>
 
        {/* Main */}
 
-        <main className="lg:pl-[285px] pt-32 md:pt-24 lg:pt-20 bg-slate-100 z-0">
+        <main className="lg:pl-[248px] pt-32 md:pt-24 lg:pt-20 bg-slate-100 z-0">
         
         <CardPerfil/>
             

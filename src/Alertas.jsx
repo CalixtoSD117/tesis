@@ -17,10 +17,10 @@ const Alertas = () =>
                 <Sidebar />
 
                 {/* Header */}
-                <Header />
+                <Header title="Alertas y Estado" />
                 {/* Main */}
 
-                <main className="lg:pl-[285px] pt-36 md:pt-24 lg:pt-28 pb-20">
+                <main className="lg:pl-[248px] pt-36 md:pt-24 lg:pt-28 pb-20">
                     <div className="pl-8 pr-8 lg:flex items-center justify-center gap-12">
 
                         <div className="ring-1 ring-white p-4 rounded-lg bg-white shadow-lg w-full lg:mb-0 mb-4 h-48 ">

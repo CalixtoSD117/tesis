@@ -22,10 +22,10 @@ import { CardDash, Header, Sidebar } from "./components";
           <Sidebar/>
   
           {/* Header */}
-          <Header/>
+          <Header title="Dashboard"/>
           {/* Main */}
   
-          <main className="lg:pl-[285px] pt-36 md:pt-24 lg:pt-28 ">
+          <main className="lg:pl-[248px] pt-36 md:pt-24 lg:pt-28 ">
             <div className="pl-8 pr-8 lg:flex items-center justify-center gap-12">
 
             <CardDash/>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { RiDeleteBin6Line } from 'react-icons/ri'
 
-const CardReport = () =>
+const CardReport = ({Title,Date,Type,Report}) =>
 {
     return (
         <>
@@ -12,17 +12,17 @@ const CardReport = () =>
 
                             <div className="flex items-center lg:justify-center justify-between lg:w-auto w-60 gap-1">
                                 <h1 className="font-medium">Titulo:</h1>
-                                <span>Contenedor H1 movido</span>
+                                <span>{Title}</span>
                             </div>
 
                             <div className="flex items-center lg:justify-center justify-between lg:w-auto w-60 gap-1 ">
                                 <h1 className="font-medium">Fecha:</h1>
-                                <span>12/21/2021</span>
+                                <span>{Date}</span>
                             </div>
 
                             <div className="flex items-center lg:justify-center justify-between lg:w-auto w-60 gap-1">
                                 <h1 className="font-medium">Tipo:</h1>
-                                <span>Revision</span>
+                                <span>{Type}</span>
                             </div>
 
                         </div>
@@ -38,7 +38,7 @@ const CardReport = () =>
                         <div className="flex items-center justify-between">
                             <div className="flex items-center justify-start w-full gap-1 ">
                                 <h1 className="font-medium text-lg">Titulo:</h1>
-                                <span className="text-lg">Contenedor H1 movido</span>
+                                <span className="text-lg">{Title}</span>
                             </div>
                             <div className="m-0 p-0">
                                 <button className="rounded-lg text-white bg-gray-400 p-1 font-medium hover:bg-gray-500 hover:shadow-lg hover:animate-pulse hover:font-bold">
@@ -49,12 +49,12 @@ const CardReport = () =>
                         <div className="flex">
                             <div className="flex items-center justify-start w-full gap-1 ">
                                 <h1 className="font-medium text-lg">Fecha:</h1>
-                                <span className="text-lg">21/02/21</span>
+                                <span className="text-lg">{Date}</span>
                             </div>
 
                             <div className="flex items-center justify-start w-full gap-1 ">
                                 <h1 className="font-medium text-lg">Tipo:</h1>
-                                <span className="text-lg">Revision</span>
+                                <span className="text-lg">{Type}</span>
                             </div>
                         </div>
 
@@ -65,7 +65,7 @@ const CardReport = () =>
                     <div className="mt-2">
 
                         <p className="ring-1 ring-gray-200 shadow-sm p-2 rounded-lg text-justify mt-2 text-sm">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae cumque veniam, illo maiores aut quisquam aspernatur ducimus modi eum provident.
+                            {Report}
                         </p>
                     </div>
                 </aside>

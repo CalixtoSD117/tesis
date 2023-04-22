@@ -3,6 +3,7 @@ import { FormReport, Header, Sidebar } from "./components";
 
 
 
+
 const Reportes = () =>{
     return (
         <div className="bg-slate-100">
@@ -12,11 +13,11 @@ const Reportes = () =>{
 
                 
                 {/* Header */}
-                <Header/>
+                <Header title="Reportes"/>
                 {/* Main */}
 
-                <main className="lg:pl-[285px] pt-36 md:pt-24 lg:pt-28 pb-10">
-
+                <main className="lg:pl-[248px] pt-36 md:pt-24 lg:pt-28 pb-10">
+                
                     <FormReport/>
 
                 </main>

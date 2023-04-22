@@ -4,14 +4,14 @@ import { RiArrowDownSLine, RiLogoutBoxLine, RiUser3Line } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
 import { user } from '.././constants'
 
-const Header = () => {
+const Header = ({title}) => {
   return (
     <div>
          {/* Header */}
-         <header className="fixed z-40 bg-gray-100 shadow-md w-full lg:w-[calc(100%-285px)] lg:ml-[285px] flex flex-col md:flex-row items-center justify-between gap-4 p-2">
+         <header className="fixed z-40 bg-gray-100 shadow-md w-full lg:w-[calc(100%-248px)] lg:ml-[248px] flex flex-col md:flex-row items-center justify-between gap-4 p-1">
             <div className="order-1 md:order-none">
                 <div className="relative">
-                    <h1 className="text-3xl font-semibold">Perfil</h1>
+                    <h1 className="text-3xl font-semibold">{title}</h1>
                 </div>
             </div>
             {user.map((data, index)=>(

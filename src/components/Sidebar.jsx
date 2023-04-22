@@ -14,12 +14,12 @@ const Sidebar = () => {
     };
   return (
     <>
-    <div className={`fixed top-0 w-3/4 lg:left-0 md:w-[285px] h-full bg-dash p-2 flex flex-col justify-between z-50 transition-all
+    <div className={`fixed top-0 w-3/4 lg:left-0 md:w-[248px] h-full bg-dash p-2 flex flex-col justify-between z-50 transition-all
         ${showMenu ? "left-0" : "-left-full"}`}>
             <div>
                 
-                <Link to="/bienvenida" className=' flex items-center gap-4 text-lg lg:text-xl uppercase mb-4 text-white font-semibold'>
-                    <img className="w-9 h-9 lg:w-10 lg:h-10" src={logotipo_v2} alt="" />
+                <Link to="/bienvenida" className=' flex items-center gap-2 text-lg lg:text-xl uppercase mb-4 text-white font-semibold'>
+                    <img className="w-9 h-9 lg:w-8 lg:h-8" src={logotipo_v2} alt="" />
                     ContentLocator
                 </Link>
                 <hr className="pt-4 "/>

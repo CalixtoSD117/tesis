@@ -1,6 +1,7 @@
 import React from 'react'
 import { RiCloseCircleLine, RiDeleteBin6Line, RiDraftLine } from 'react-icons/ri'
 import CardReport from './CardReport'
+import { reportes } from '../constants'
 
 const FormReport = () => {
   return (
@@ -42,8 +43,16 @@ const FormReport = () => {
                             <h1 className="text-lg font-medium">
                                 Reportes Generados
                             </h1>
-
-                            <CardReport/>
+                            {reportes.map(({id,title,date,type,report})=>(
+                                <CardReport
+                                key={id}
+                                Title={title}
+                                Date={date}
+                                Type={type}
+                                Report={report}
+                                />
+                            ))}
+                            
 
                         </div>
 

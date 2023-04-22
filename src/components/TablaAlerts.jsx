@@ -1,6 +1,7 @@
 import React from 'react'
+import { contenedor } from '../constants'
 
-const TablaAlerts = ({Id,Estado,Ubicacion,Dis,Temp,Bat}) => {
+const TablaAlerts = () => {
   return (
     <div className='overflow-x-auto w-full border rounded-xl bg-white shadow-md'>
     <table className='table w-full'>
@@ -16,26 +17,17 @@ const TablaAlerts = ({Id,Estado,Ubicacion,Dis,Temp,Bat}) => {
             </tr>
         </thead>
         <tbody className='text-center'>
-
-            <tr className='cursor-pointer border divide-x'>
-            <td>{Id}</td>
-            <td>{Estado}</td>
-            <td>{Ubicacion}</td>
-            <td>{Dis}</td>
-            <td>{Temp}°C</td>
-            <td>{Bat}%</td>
+          {contenedor.map((data) =>(
+            <tr key={data.id} className='cursor-pointer border divide-x'>
+            <td>{data.id}</td>
+            <td>{data.estado}</td>
+            <td>{data.ubicacion}</td>
+            <td>{data.dispositivo}</td>
+            <td>{data.temperatura}°C</td>
+            <td>{data.bateria}%</td>
             </tr>
-
-            <tr className='cursor-pointer'>
-            <td>2</td>
-            <td>Activo</td>
-            <td>Universidad de Colima</td>
-            <td>Conectado</td>
-            <td>22°C</td>
-            <td>100%</td>
-            </tr>
-            
-            
+          ))}
+                 
         </tbody>
     </table>
     </div>
