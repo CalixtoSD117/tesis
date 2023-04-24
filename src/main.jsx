@@ -5,6 +5,7 @@ import './index.css'
 import Loginp from './Loginp'
 import { BrowserRouter } from 'react-router-dom'
 import Dashboard from './Dashboard'
+import 'react-toastify/dist/ReactToastify.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

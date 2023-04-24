@@ -1,4 +1,6 @@
 import { persona1 } from "../assets";
+import { amazon, logmanza, mercado, ragel } from "../assets";
+
 
 export const user =[
     {
@@ -72,6 +74,19 @@ export const reportes = [
         type: 'Traslado',
         report: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae cumque veniam, illo maiores aut quisquam aspernatur ducimus modi eum provident.'
 
+    },
+
+]
+
+export const empresas = [
+    {
+        img: amazon
+    },
+    {
+        img: mercado
+    },
+    {
+        img: logmanza
     },
 
 ]

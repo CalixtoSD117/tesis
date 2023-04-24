@@ -7,6 +7,7 @@ import Loginp from "./Loginp";
 import Mapa from "./Mapa";
 import Perfil from "./Perfil";
 import Reportes from "./Reportes";
+import Landing from "./Landing";
 
 
 const App = () => {
@@ -14,7 +15,8 @@ const App = () => {
     <div>
       <Routes>
         <Route>
-          <Route path="/" element={<Loginp/>} />
+          <Route path="/" element={<Landing/>} />
+            <Route path="/login" element={<Loginp/>} />
             <Route path="/bienvenida" element={<Bienvenida/>} />
             <Route path="/dashboard" element={<Dashboard/>} />
             <Route path="/mapa" element={<Mapa/>} />

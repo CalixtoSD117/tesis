@@ -32,3 +32,11 @@
 .bg-wt{
   background: rgba(255, 255, 255, 0.9);
 }
+
+.bg-primary{
+  background: #474747;
+}
+
+.bgp{
+  background: #ffffff;
+}

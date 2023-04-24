@@ -3,12 +3,15 @@ import { logotipo_v2 } from "./assets";
 import { RiMailLine, RiLock2Fill } from "react-icons/ri";
 import { useState } from "react";
 import axios from "axios";
+import { motion } from "framer-motion";
+import { ToastContainer, toast } from 'react-toastify';
 
 const Loginp = () => {
   //Verificacion de logeo atte: William :)
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigation = useNavigate();
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -20,12 +23,16 @@ const Loginp = () => {
           password,
         }
       );
-      if (response) {
+      if (response.status == 200) {
         console.log("Se consiguio el cometido");
-        navigation("/bienvenida");
+        toast.success('Inicio de Sesion Correctamente',{autoClose: 1000});
+        setTimeout(() => {
+          navigation("/bienvenida");
+        }, 2000); // retraso de 2 segundos (2000 milisegundos)
       }
     } catch (error) {
       console.log("Error");
+      toast.error('Correo o Contraseña Incorrectos',{autoClose: 1000});
     }
   };
 
@@ -34,7 +41,11 @@ const Loginp = () => {
       {/* Div principal que contiene todo el contenido de la página */}
       <div className="max-w-lg">
         {/* Div que limita el ancho de la página */}
-        <div className="bg-white w-full rounded-lg p-8 mb-8">
+        <motion.div
+        transition={{duration: 0.5}}
+        initial={{y: -100}}
+        animate={{y: 0}}
+        className="bg-white w-full rounded-lg p-8 mb-8">
           {/* Div que contiene el formulario de inicio de sesión */}
           <div className="flex flex-col items-center gap-1 mb-8">
             <div className="flex justify-center mb-8">
@@ -109,8 +120,9 @@ const Loginp = () => {
               Recuperar
             </a>
           </span>
-        </div>
+        </motion.div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
