@@ -30,7 +30,7 @@ const Landing = () =>
       {/* sidebar lateral */}
 
      
-        <nav className={`fixed h-52 top-16 text-gray-900 transition-all duration-300 ease-in-out w-1/2 bg-slate-50  z-50 rounded-r-full shadow-2xl ${menu ? "left-0" : '-left-full'}`}>
+        <nav className={`lg:hidden fixed h-52 md:w-52 top-16 text-gray-900 transition-all duration-300 ease-in-out w-1/2 bg-slate-50  z-50 rounded-r-full shadow-2xl ${menu ? "left-0" : '-left-full'}`}>
           <ul className='flex flex-col m-6  gap-3 pr-3 font-semibold'>
               <li><a href="#inicio">Inicio</a></li>
               <li>Acerca de</li>
