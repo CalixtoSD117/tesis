@@ -53,12 +53,17 @@ const CardPerfil = () => {
             <label className="p-2 relative">Area: </label>
             <label type="text" className="bg-transparent ring-1 ring-gray-300 px-5 relative rounded peer ">{data.area} </label>
             </div>
+
+            <div  className="mt-2 ">
+            <label className="p-2 relative">Gmail: </label>
+            <label type="text" className="bg-transparent ring-1 ring-gray-300 px-5 relative rounded peer ">{data.gmail} </label>
+            </div>
             
             </div> 
             
 
             <button className="bg-blue-500 shadow-lg text-sm text-white ring-1 ring-blue-500 hover:bg-blue-800 hover:ring-blue-800  rounded-full px-4 py-1 m-2">
-                Editar datos
+                Editar correo
             </button>
             </div>
 
