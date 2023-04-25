@@ -32,7 +32,7 @@ const Loginp = () => {
       }
     } catch (error) {
       console.log("Error");
-      toast.error('Correo o Contraseña Incorrectos',{autoClose: 1000});
+      toast.error('Correo o Contraseña Incorrectos',{autoClose: 4000});
     }
   };
 

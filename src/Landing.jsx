@@ -3,7 +3,9 @@ import { motion } from "framer-motion"
 import { contenedor, dis, logotipo_v2, mac, mercado, p1, p2, p3, p4, p5, p6 } from './assets'
 import { empresas } from './constants'
 import { Link } from 'react-router-dom'
-import { RiArrowUpLine, RiFacebookLine, RiInstagramLine, RiTwitterLine, RiUser3Line } from "react-icons/ri";
+import { RiArrowUpLine, RiCloseLine, RiFacebookLine, RiInstagramLine, RiMenu3Line, RiTwitterLine, RiUser3Line } from "react-icons/ri";
+import { useState } from 'react'
+
 
 const Landing = () =>
 {
@@ -16,9 +18,34 @@ const Landing = () =>
     });
   };
 
+  const [menu, setmenu] = useState(false)
+
+  const handlemenu = () =>{
+    setmenu(!menu)
+    console.log
+  }
+
   return (
     <div className='bgp'>
-      <header id='home' className='bg-transparent flex items-center justify-between p-3 pb-3'>
+      {/* sidebar lateral */}
+
+     
+        <nav className={`fixed h-52 top-16 text-gray-900 transition-all duration-300 ease-in-out w-1/2 bg-slate-50  z-50 rounded-r-full shadow-2xl ${menu ? "left-0" : '-left-full'}`}>
+          <ul className='flex flex-col m-6  gap-3 pr-3 font-semibold'>
+              <li><a href="#inicio">Inicio</a></li>
+              <li>Acerca de</li>
+              <li>Contactanos</li>
+              <motion.li
+                whileHover={{ scale: 0.9, rotate: 2 }}
+              >
+                <Link to="/login" className='hover:bg-cyan-400 w-36 hover:text-white  rounded-lg transition-all duration-300 flex  items-center justify-center gap-2 pl-0 p-2'> <RiUser3Line /> Iniciar Sesion</Link>
+              </motion.li>
+            </ul>
+        </nav>
+     
+        
+      {/* header */}
+      <header id='home' className='fixed top-0 pt-3 pb-3 p-3 lg:pl-10 lg:pr-10 bg-white lg:bg-opacity-90 flex items-center justify-between w-full rounded-b-lg'>
         <div className='flex items-center gap-3 text-2xl font-bold'>
           <img className='h-8 w-8 rounded-full' src={logotipo_v2} alt="imagen" />
           <h1>ContentLocator</h1>
@@ -36,10 +63,15 @@ const Landing = () =>
             </motion.li>
           </ul>
         </nav>
+        
+        <button onClick={handlemenu} className='bg-slate-300 p-2 rounded-lg lg:hidden '>
+          {menu ? <RiCloseLine/> : <RiMenu3Line/>}
+        </button>
+
       </header>
 
 
-      <section className=' md:flex md:items-center md:justify-center p-10 lg:mt-10 h-full w-full'>
+      <section className=' md:flex md:items-center md:justify-center p-10 pt-20  lg:mt-10 h-full w-full'>
         <motion.div
           initial={{ x: -500 }}
           animate={{

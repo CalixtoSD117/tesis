@@ -8,11 +8,11 @@ const CardTemp = ({temperature }) => {
   const stroke = temperature >= 30 ? '#EA1239':'#1285EA'
   return (
     <div className=' flex flex-col items-center justify-center'>
-        <div>
+        {/* <div>
             <h1 className='font-semibold text-2xl'>Temperatura</h1>
-        </div>
+        </div> */}
         
-        <svg className="w-32" viewBox="0 0 100 100">
+        <svg className="w-16" viewBox="0 0 100 100">
           <circle
             cx="50"
             cy="50"

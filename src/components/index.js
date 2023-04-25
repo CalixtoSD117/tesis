@@ -11,6 +11,7 @@ import FormReport from "./FormReport";
 import CardReport from "./CardReport";
 import CardDash from "./CardDash";
 import CardsWelcome from "./CardsWelcome";
+import Sideland from "./Sideland";
 
 
 
@@ -28,4 +29,5 @@ export{
     CardReport,
     CardDash,
     CardsWelcome,
+    Sideland,
 }

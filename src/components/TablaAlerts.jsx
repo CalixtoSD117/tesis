@@ -1,5 +1,7 @@
 import React from 'react'
 import { contenedor } from '../constants'
+import CardBat from './CardBat'
+import CardTemp from './CardTemp'
 
 const TablaAlerts = () => {
   return (
@@ -23,8 +25,8 @@ const TablaAlerts = () => {
             <td>{data.estado}</td>
             <td>{data.ubicacion}</td>
             <td>{data.dispositivo}</td>
-            <td>{data.temperatura}°C</td>
-            <td>{data.bateria}%</td>
+            <td><CardTemp temperature={data.temperatura}/></td>
+            <td><CardBat Battery={data.bateria}/></td>
             </tr>
           ))}
                  
