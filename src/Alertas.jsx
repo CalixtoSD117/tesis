@@ -6,9 +6,6 @@ import { CardBat, CardTemp, Header, Sidebar, TablaAlerts } from "./components";
 const Alertas = () =>
 {
 
-
-    const Battery = 30;
-    const temperature = 21;
     return (
         <div className="bg-slate-100">
             <div className='min-h-screen '>
@@ -36,7 +33,7 @@ const Alertas = () =>
                     </div> */}
                     <div className="pl-8 pr-8">
                         <div className="pt-4 mb-10">
-                            <TablaAlerts Temp={temperature} Bat={Battery} Ubicacion="San pedrito" Id="1" Estado="Activo" Dis="Conectado" />
+                            <TablaAlerts Temp="" Bat="" Ubicacion="San pedrito" Id="1" Estado="Activo" Dis="Conectado" />
                         </div>
                     </div>
 
