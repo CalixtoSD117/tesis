@@ -32,7 +32,7 @@ const CardPerfil = () => {
 
             <div  className="mt-2 ">
             <label className="p-2 relative">Empresa: </label>
-            <label type="text" className="bg-transparent ring-1 ring-gray-300 px-10 relative rounded peer ">{data.lastname} </label>
+            <label type="text" className="bg-transparent ring-1 ring-gray-300 px-10 relative rounded peer ">{data.empresa} </label>
             </div>
             
             </div>
