@@ -18,48 +18,49 @@ const CardPerfil = () => {
             </div>
             </div>
 
-            <div className="lg:flex gap-3  justify-center pt-10 pb-10">
-            <div  className="mt-2">
+            <div className="lg:flex lg:flex-row flex flex-col ml-10 mr-10 gap-3 justify-center pt-10 pb-10">
+            <div  className="mt-2 flex items-center justify-between lg:justify-center">
             <label className="p-2 relative">Nombres: </label>
-            <label type="text" className="bg-transparent ring-1 ring-gray-300 px-9 relative rounded peer 
+            <label type="text" className="bg-transparent ring-1 ring-gray-300 w-48 relative rounded peer 
              outline-none focus:ring-gray-400">{data.name} </label>
             </div>
             
-            <div  className="mt-2 ">
+            <div  className="mt-2 flex items-center justify-between lg:justify-center ">
             <label className="p-2 relative">Apellidos: </label>
-            <label type="text" className="bg-transparent ring-1 ring-gray-300 px-10 relative rounded peer ">{data.lastname} </label>
+            <label type="text" className="bg-transparent ring-1 ring-gray-300 w-48 relative rounded peer ">{data.lastname} </label>
             </div>
 
-            <div  className="mt-2 ">
+            <div  className="mt-2 flex items-center justify-between  lg:justify-center">
             <label className="p-2 relative">Empresa: </label>
-            <label type="text" className="bg-transparent ring-1 ring-gray-300 px-10 relative rounded peer ">{data.empresa} </label>
+            <label type="text" className="bg-transparent ring-1 ring-gray-300 w-48 relative rounded peer ">{data.empresa} </label>
             </div>
             
             </div>
+            {/*  */}
 
-            <div className="lg:flex gap-3  justify-center pb-10">
-            <div  className="mt-2">
-            <label className="p-2 relative">N° de dispositivos </label>
-            <label type="text" className="bg-transparent ring-1 ring-gray-300 px-5 relative rounded peer 
+            <div className="lg:flex lg:flex-row flex flex-col gap-3 mr-10 ml-10 justify-center pb-10">
+            <div  className="mt-2 flex items-center justify-between  lg:justify-center">
+            <label className="p-2 relative">N° de dispositivos: </label>
+            <label type="text" className="bg-transparent ring-1 ring-gray-300 w-32  lg:w-52 relative rounded peer 
              outline-none focus:ring-gray-400">{data.dispositivos} </label>
             </div>
             
-            <div  className="mt-2 ">
+            <div  className="mt-2 flex items-center justify-between  lg:justify-center">
             <label className="p-2 relative">Puerto: </label>
-            <label type="text" className="bg-transparent ring-1 ring-gray-300 px-5 relative rounded peer ">{data.puerto} </label>
+            <label type="text" className="bg-transparent ring-1 ring-gray-300 w-52 relative rounded peer ">{data.puerto} </label>
             </div>
 
-            <div  className="mt-2 ">
+            <div  className="mt-2 flex items-center justify-between  lg:justify-center">
             <label className="p-2 relative">Area: </label>
-            <label type="text" className="bg-transparent ring-1 ring-gray-300 px-5 relative rounded peer ">{data.area} </label>
+            <label type="text" className="bg-transparent ring-1 ring-gray-300 w-52 relative rounded peer ">{data.area} </label>
             </div>
 
-            <div  className="mt-2 ">
+            <div  className="mt-2 flex items-center justify-between  lg:justify-center">
             <label className="p-2 relative">Gmail: </label>
-            <label type="text" className="bg-transparent ring-1 ring-gray-300 px-5 relative rounded peer ">{data.gmail} </label>
+            <label type="text" className="bg-transparent ring-1 ring-gray-300 w-52 relative rounded peer ">{data.gmail} </label>
             </div>
             
-            </div> 
+            </div>
             
 
             <button className="bg-blue-500 shadow-lg text-sm text-white ring-1 ring-blue-500 hover:bg-blue-800 hover:ring-blue-800  rounded-full px-4 py-1 m-2">
