@@ -55,11 +55,16 @@ const CardPerfil = () => {
             <label type="text" className="bg-transparent ring-1 ring-gray-300 w-52 relative rounded peer ">{data.area} </label>
             </div>
 
-            <div  className="mt-2 flex items-center justify-between  lg:justify-center">
+            <div  className="mt-2 flex items-center justify-between lg:hidden lg:justify-center">
             <label className="p-2 relative">Gmail: </label>
             <label type="text" className="bg-transparent ring-1 ring-gray-300 w-52 relative rounded peer ">{data.gmail} </label>
             </div>
             
+            </div>
+
+            <div  className="mt-2 lg:flex items-center justify-between hidden  lg:justify-center">
+            <label className="p-2 relative">Gmail: </label>
+            <label type="text" className="bg-transparent ring-1 ring-gray-300 w-52 relative rounded peer ">{data.gmail} </label>
             </div>
             
 
