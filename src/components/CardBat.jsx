@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const CardBat = ({ Battery }) => {
   const radius = 40;
   const strokeWidth = 10;
@@ -48,7 +49,9 @@ const CardBat = ({ Battery }) => {
           {Battery}%
         </text>
       </svg>
+     
     </div>
+    
   );
 };
 
