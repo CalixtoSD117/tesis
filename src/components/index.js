@@ -12,6 +12,7 @@ import CardReport from "./CardReport";
 import CardDash from "./CardDash";
 import CardsWelcome from "./CardsWelcome";
 import Sideland from "./Sideland";
+import Dateinput from "./Dateinput";
 
 
 
@@ -30,4 +31,5 @@ export{
     CardDash,
     CardsWelcome,
     Sideland,
+    Dateinput,
 }
