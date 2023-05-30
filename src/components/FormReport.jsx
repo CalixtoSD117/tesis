@@ -15,9 +15,12 @@ const FormReport = () =>
     const [reportesGenerados, setReportesGenerados] = useState([]);
 
     const eliminate = () =>{
+        
+        
         setTitle('')
         setMessage('')
         setType('')
+       
     }
 
     const handleSubmit = async (e) =>
@@ -31,7 +34,10 @@ const FormReport = () =>
                 tipo,
                 reporte
             });
-            if (response.status == 200) {
+            if(titulo == "" | tipo =="" | reporte == "" ){
+            toast.error('Favor de acompletar los campos',{autoClose: 1000});
+            
+            }else{
                 console.log("Se consiguio el cometido");
                 toast.success('reporte creado correctamente',{autoClose: 1000});
 
@@ -82,6 +88,7 @@ const FormReport = () =>
                                 className="h-7 text-sm rounded-lg ring-[0.5px] ring-gray-500 outline-none pl-3 w-52"
                                 value={titulo}
                                 onChange={(e) => setTitle(e.target.value)}
+                                required
                             />
                         </div>
                         
@@ -92,6 +99,7 @@ const FormReport = () =>
                                 className="h-7 text-sm rounded-lg ring-[0.5px] ring-gray-500 outline-none pl-3 w-52"
                                 value={tipo}
                                 onChange={(e) => setType(e.target.value)}
+                                required
                             />
                         </div>
 
@@ -110,6 +118,7 @@ const FormReport = () =>
                             className="h-32 mt-2 block ring-1 ring-gray-400 text-sm w-full rounded-md pl-3 shadow-sm outline-none focus:border-gray-400 focus:ring-[0.5px]"
                             value={reporte}
                             onChange={(e) => setMessage(e.target.value)}
+                            required
                         ></textarea>
                     </aside>
 
@@ -127,7 +136,7 @@ const FormReport = () =>
                 <div className="mt-5">
                     <h1 className="text-lg font-medium">Reportes Generados</h1>
                     {reportesGenerados.map((reporte) => (
-              <CardReport key={reporte.id} titulo={reporte.titulo} tipo={reporte.tipo} reporte={reporte.reporte} />
+              <CardReport key={reporte.id} Title={reporte.titulo} Type={reporte.tipo_reporte} Report={reporte.descripcion} Date={reporte.fecha_creacion} />
             ))}
                     
                 </div>

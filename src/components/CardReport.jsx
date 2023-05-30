@@ -7,6 +7,7 @@ const CardReport = ({Title,Date,Type,Report}) =>
         <>
             <div className="mt-5">
                 <aside className="bg-white rounded-lg p-2">
+
                     <div className="lg:flex items-center lg:justify-between hidden">
                         <div className="lg:flex lg:flex-row flex flex-col items-center lg:gap-4 w-full ">
 
@@ -46,7 +47,7 @@ const CardReport = ({Title,Date,Type,Report}) =>
                                 </button>
                             </div>
                         </div>
-                        <div className="flex">
+                        <div className="">
                             <div className="flex items-center justify-start w-full gap-1 ">
                                 <h1 className="font-medium text-lg">Fecha:</h1>
                                 <span className="text-lg">{Date}</span>
