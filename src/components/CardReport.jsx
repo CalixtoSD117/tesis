@@ -6,7 +6,7 @@ const CardReport = ({Title,Date,Type,Report}) =>
     return (
         <>
             <div className="mt-5">
-                <aside className="bg-white rounded-lg p-2">
+                <aside className="bg-white rounded-lg p-2 shadow-md">
 
                     <div className="lg:flex items-center lg:justify-between hidden">
                         <div className="lg:flex lg:flex-row flex flex-col items-center lg:gap-4 w-full ">
