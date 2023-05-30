@@ -13,6 +13,12 @@ import { CardDash, Header, Sidebar } from "./components";
       const defaultCenter = {
         lat: 19.116945, lng:-104.3456304
       }
+
+      const markerPosition = {
+        lat: 19.116945, // Latitud del marcador
+        lng: -104.3456304, // Longitud del marcador
+      };
+
     
     return (
       <div className="bg-slate-50">
@@ -40,7 +46,9 @@ import { CardDash, Header, Sidebar } from "./components";
                 mapContainerStyle={mapStyles}
                 zoom={13}
                 center={defaultCenter}
-                />
+                >
+                  <Marker position={markerPosition} />
+                </GoogleMap>
                 </LoadScript>
             
             </div>
