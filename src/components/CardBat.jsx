@@ -7,6 +7,7 @@ const CardBat = ({ Battery }) => {
   const circumference = 2 * Math.PI * radius;
   const offset = circumference - (Battery / 100) * circumference;
   const strokeColor = Battery >= 50 ? '#76E86A' : '#FFAD1D';
+  
 
   return (
     <div className='flex flex-col items-center justify-center'>
