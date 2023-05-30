@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
-import { GoogleMap, Marker, LoadScript  } from "@react-google-maps/api";
+import { GoogleMap, Marker, LoadScript,InfoWindow  } from "@react-google-maps/api";
 import { Header, Sidebar, Tabla } from "./components";
-
+import { useState } from "react";
 
 
 const Mapa = () => {
@@ -14,6 +14,22 @@ const Mapa = () => {
   const defaultCenter = {
     lat: 19.116945, lng:-104.3456304
   }
+
+  const markerPosition = {
+    lat: 19.116945, // Latitud del marcador
+    lng: -104.3456304, // Longitud del marcador
+  };
+
+  const [isInfoWindowOpen, setIsInfoWindowOpen] = useState(false);
+
+  const handleMarkerClick = () => {
+    setIsInfoWindowOpen(true);
+  };
+
+  const handleInfoWindowClose = () => {
+    setIsInfoWindowOpen(false);
+  };
+
   return (
     <div className="bg-slate-50">
     <div className='min-h-screen'>
@@ -35,7 +51,21 @@ const Mapa = () => {
                 mapContainerStyle={mapStyles}
                 zoom={13}
                 center={defaultCenter}
-                />
+                >
+                  <Marker position={markerPosition} onClick={handleMarkerClick} />
+                {isInfoWindowOpen && (
+                  <InfoWindow
+                    position={markerPosition}
+                    onCloseClick={handleInfoWindowClose}
+                  >
+                    <div>
+                      <p>Contenedor AD1</p>
+                      <p>DEVKIT 170</p>
+                    </div>
+                  </InfoWindow>
+                )}
+
+                </GoogleMap>
                 </LoadScript>
             
         </div>
