@@ -129,7 +129,7 @@ const CardReport = ({ Title, Date, Type, Report }) =>
                                 <span className="text-lg">{Title}</span>
                             </div>
                             <div className="m-0 p-0">
-                                <button className="rounded-lg text-white bg-gray-400 p-1 font-medium hover:bg-gray-500 hover:shadow-lg hover:animate-pulse hover:font-bold">
+                                <button onClick={openModal} className="rounded-lg text-white bg-gray-400 p-1 font-medium hover:bg-gray-500 hover:shadow-lg hover:animate-pulse hover:font-bold">
                                     <RiDeleteBin6Line />
                                 </button>
                             </div>
