@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CardTemp = ({temperature }) => {
+const CardTemp = ({ temperature }) => {
     const radius = 40;
   const strokeWidth = 10;
   const circumference = 2 * Math.PI * radius;

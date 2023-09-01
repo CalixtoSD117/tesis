@@ -20,7 +20,7 @@ import { RiHome6Line,
 import { Menu, Transition } from '@headlessui/react'
 import { logotipo_v2, persona1 } from "../assets";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 
 const Navbarr = () => {
@@ -30,6 +30,12 @@ const Navbarr = () => {
     const toggleMenu = () => {
         setShowMenu(!showMenu)
     };
+
+    // Cerrar Sesion
+    const handleOut = (e) => {
+        localStorage.removeItem("accessToken");
+        window.location.href = '/login';
+      };
 
   return (
     <div className=" bg-login">
@@ -145,9 +151,9 @@ const Navbarr = () => {
                             </Menu.Item>
                             <hr />
                             <Menu.Item >
-                                <Link to="/" className="flex items-center gap-4 p-2 rounded-lg hover:bg-blue-200 transition-colors text-sm ">
+                                <Link onClick={handleOut} className="flex items-center gap-4 p-2 rounded-lg hover:bg-blue-200 transition-colors text-sm ">
                                 <RiLogoutBoxLine/>Cerrar Sesion
-                                
+                            
                                 </Link>
                             </Menu.Item>
                           

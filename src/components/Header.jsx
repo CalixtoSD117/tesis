@@ -1,10 +1,17 @@
 import { Menu, Transition } from '@headlessui/react'
 import React from 'react'
 import { RiArrowDownSLine, RiLogoutBoxLine, RiUser3Line } from 'react-icons/ri'
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import { user } from '.././constants'
 
 const Header = ({title}) => {
+
+    // Cerrar Sesion
+    const handleOut = () => {
+        localStorage.removeItem("accessToken");
+        window.location.href = '/login';
+      };
+
   return (
     <div>
          {/* Header */}
@@ -57,7 +64,7 @@ const Header = ({title}) => {
 
                             <hr />
                             <Menu.Item >
-                                <Link to="/" className="flex items-center gap-4 p-2 rounded-lg hover:bg-blue-200 transition-colors text-sm ">
+                                <Link onClick={handleOut} className="flex items-center gap-4 p-2 rounded-lg hover:bg-blue-200 transition-colors text-sm ">
                                 <RiLogoutBoxLine/>Cerrar Sesion
                                 
                                 </Link>

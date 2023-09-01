@@ -4,7 +4,7 @@ import { RiMailLine, RiLock2Fill } from "react-icons/ri";
 import { useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from "react-toastify";
 
 const Loginp = () => {
   //Verificacion de logeo atte: William :)
@@ -12,27 +12,26 @@ const Loginp = () => {
   const [password, setPassword] = useState("");
   const navigation = useNavigate();
 
-
+  // https://servertesis-production.up.railway.app/login
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post(
-        "https://servertesis-production.up.railway.app/login",
-        {
-          email,
-          password,
-        }
-      );
-      if (response.status == 200) {
-        console.log("Se consiguio el cometido");
-        toast.success('Inicio de Sesion Correctamente',{autoClose: 1000});
+      const response = await axios.post("https://servertesis-production.up.railway.app/login", {
+        email,
+        password,
+      });
+      if (response.status === 200) {
+        const token = response.data.token;
+        localStorage.setItem("accessToken", token)
+        console.log("Se consiguio el cometido")
+        toast.success("Inicio de Sesion Correctamente", { autoClose: 1500 });
         setTimeout(() => {
           navigation("/bienvenida");
         }, 2000); // retraso de 2 segundos (2000 milisegundos)
       }
     } catch (error) {
       console.log("Error");
-      toast.error('Correo o Contraseña Incorrectos',{autoClose: 4000});
+      toast.error("Correo o Contraseña Incorrectos", { autoClose: 4000 });
     }
   };
 
@@ -42,10 +41,11 @@ const Loginp = () => {
       <div className="max-w-lg">
         {/* Div que limita el ancho de la página */}
         <motion.div
-        transition={{duration: 0.5}}
-        initial={{y: -100}}
-        animate={{y: 0}}
-        className="bg-white w-full rounded-lg p-8 mb-8">
+          transition={{ duration: 0.5 }}
+          initial={{ y: -100 }}
+          animate={{ y: 0 }}
+          className="bg-white w-full rounded-lg p-8 mb-8"
+        >
           {/* Div que contiene el formulario de inicio de sesión */}
           <div className="flex flex-col items-center gap-1 mb-8">
             <div className="flex justify-center mb-8">
@@ -104,7 +104,7 @@ const Loginp = () => {
                 Iniciar sesión
               </button>
               </Link> */}
-              
+
               <button
                 type="submit"
                 className="w-full bg-blue-500 py-2 px-4 text-white rounded-md hover:bg-blue-600 transition-colors"

@@ -2,6 +2,7 @@ import { p6 } from "../assets";
 import { amazon, logmanza, mercado, ragel } from "../assets";
 
 
+
 export const user =[
     {
         name: 'Juan Pablo ',

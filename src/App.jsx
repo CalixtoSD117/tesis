@@ -1,4 +1,4 @@
-import { Routes,Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Alertas from "./Alertas";
 import Bienvenida from "./Bienvenida";
 import { Navbarr } from "./components"
@@ -8,21 +8,21 @@ import Mapa from "./Mapa";
 import Perfil from "./Perfil";
 import Reportes from "./Reportes";
 import Landing from "./Landing";
-
+import PrivateRoute from "./routes/Privateroutes";
+import Approutes from "./routes/Approutes";
+import PublicRoutes from "./routes/PublicRoutes";
 
 const App = () => {
   return (
     <div>
       <Routes>
         <Route>
-          <Route path="/" element={<Landing/>} />
-            <Route path="/login" element={<Loginp/>} />
-            <Route path="/bienvenida" element={<Bienvenida/>} />
-            <Route path="/dashboard" element={<Dashboard/>} />
-            <Route path="/mapa" element={<Mapa/>} />
-            <Route path="/alertas" element={<Alertas/>} />
-            <Route path="/reportes" element={<Reportes/>} />
-            <Route path="/perfil" element={<Perfil/>} />
+          <Route path="/" element={<Landing />}/>
+          <Route path="/login" element={<Loginp />}/>
+          
+          <Route path="/*" element={<PrivateRoute>
+            <Approutes />
+          </PrivateRoute>} />
         </Route>
       </Routes>
     </div>
