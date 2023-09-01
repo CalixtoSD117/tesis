@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from "framer-motion"
-import { contenedor, dis, logotipo_v2, mac, mercado, p1, p2, p3, p4, p5, p6 } from './assets'
+import { contenedor, logotipo_v2, mac, mercado, p1, p2, p3, p4, p5, p6 } from './assets'
 import { empresas } from './constants'
 import { Link } from 'react-router-dom'
 import { RiArrowUpLine, RiCloseLine, RiFacebookLine, RiInstagramLine, RiMenu3Line, RiTwitterLine, RiUser3Line } from "react-icons/ri";

@@ -1,7 +1,6 @@
 import logotipo_v2 from "./logotipo_v2.png"
-import persona1 from "./persona1.avif"
+import persona1 from "./p7.jpg"
 import contenedor from "./contenedor.png";
-import dis from "./dis.png";
 import amazon from "./amazon.png";
 import logmanza from "./logmanza.png"
 import mercado from "./mercado.png"
@@ -13,14 +12,12 @@ import p3 from "./p3.jpg"
 import p4 from "./p4.jpg"
 import p5 from "./p5.jpg"
 import p6 from "./p6.jpg"
-import active_icon from "./activeIcon.png"
 
 
 export{
     logotipo_v2,
     persona1,
     contenedor,
-    dis,
     amazon,
     logmanza,
     mercado,
@@ -32,5 +29,4 @@ export{
     p4,
     p5,
     p6,
-    active_icon
 }
