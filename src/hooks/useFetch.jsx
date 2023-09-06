@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 export function useFetch( url ) {
 
-    const [temperature, setTemperature] = useState(null);
+    const [user, setUserData] = useState(null);
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
     
@@ -10,10 +10,10 @@ export function useFetch( url ) {
         setLoading(true)
         fetch(url)
           .then((response) => response.json())
-          .then((temperature) => setTemperature(temperature))
+          .then((user) => setUserData(user))
           .catch((error) => setError(error))
           .finally( () => setLoading(false))
       }, [])
 
-      return { temperature, loading, error }
+      return { user, loading, error }
 }

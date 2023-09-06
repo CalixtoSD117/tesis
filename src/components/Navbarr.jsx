@@ -18,7 +18,7 @@ import { RiHome6Line,
     RiSettings4Line
  } from "react-icons/ri";
 import { Menu, Transition } from '@headlessui/react'
-import { logotipo_v2, persona1 } from "../assets";
+import { logotipo_v2, persona1, p } from "../assets";
 import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { Outlet } from "react-router-dom";
@@ -33,7 +33,7 @@ const Navbarr = () => {
 
     // Cerrar Sesion
     const handleOut = (e) => {
-        localStorage.removeItem("accessToken");
+        localStorage.clear();
         window.location.href = '/login';
       };
 
@@ -110,7 +110,7 @@ const Navbarr = () => {
                 {/* Usuario Dropdown */}
                 <Menu as="div">
                     <Menu.Button className="flex items-center gap-4 hover:bg-gray-200 py-2 px-4 rounded-full transition-colors">
-                    <img src={persona1} alt="example" 
+                    <img src={p} alt="example" 
                 className="w-8 h-8 object-cover rounded-full " />
                 <span>Nombre de usuario</span>
                 <RiArrowDownSLine/>
@@ -127,7 +127,7 @@ const Navbarr = () => {
                             
                             <Menu.Item >
                                 <div to="/" className="flex items-center gap-4 p-2 rounded-lg">
-                                <img src={persona1} alt="example" className="w-8 h-8 object-cover rounded-full absolute" />
+                                <img src={p} alt="example" className="w-8 h-8 object-cover rounded-full absolute" />
                                 <div className="pl-12">
                                     <h5 className="text-sm ">Nombre de usuario</h5>
                                     <p className="text-gray-400 text-xs">Correo de usuario</p>

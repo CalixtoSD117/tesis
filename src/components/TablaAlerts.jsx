@@ -6,16 +6,17 @@ import { useFetch } from "../hooks/useFetch";
 import { useEffect, useState } from "react";
 
 const TablaAlerts = () => {
-  const [temperature, setTemperature] = useState(null);
+  const [temperature, setTemperature] = useState([]);
+  const userId = localStorage.getItem("userId");
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetch("https://contenlocator.com/api/temperatureData.php");
+      const data = await fetch(`https://contenlocator.com/api/temperatureData.php?user_id=${userId}`);
       const temperature = await data.json();
       setTemperature(temperature);
     };
 
-    const interval = setInterval(fetchData, 3000); // 5 seconds
+    const interval = setInterval(fetchData, 1000); // 5 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -30,7 +31,7 @@ const TablaAlerts = () => {
             <th className="px-4 py-2">Temperatura</th>
             <th className="px-4 py-2">Bateria</th>
           </tr>
-        </thead>
+        </thead> 
         <tbody className="text-center">
           {temperature?.map((data) => (
             <tr key={data.id} className="cursor-pointer border divide-x">

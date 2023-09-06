@@ -12,6 +12,7 @@ import p3 from "./p3.jpg"
 import p4 from "./p4.jpg"
 import p5 from "./p5.jpg"
 import p6 from "./p6.jpg"
+import p from "./p.jpg"
 
 
 export{
@@ -29,4 +30,5 @@ export{
     p4,
     p5,
     p6,
+    p,
 }

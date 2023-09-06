@@ -21,8 +21,10 @@ const Loginp = () => {
         password,
       });
       if (response.status === 200) {
-        const token = response.data.token;
+        const {token, userId} = response.data;
         localStorage.setItem("accessToken", token)
+        localStorage.setItem("userId", userId)
+        
         console.log("Se consiguio el cometido")
         toast.success("Inicio de Sesion Correctamente", { autoClose: 1500 });
         setTimeout(() => {
