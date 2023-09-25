@@ -15,15 +15,12 @@ const FormReport = () => {
 
   const fetchReportesGenerados = async () => {
     try {
-      const response = await axios.get(
-        'https://servertesis-production.up.railway.app/reportes'
-      );
-      if (response.status === 200) {
-        setReportesGenerados(response.data);
-      }
+      const response = await axios.get('https://contenlocator.com/api/reportApi.php')
+      const data = response.data;
+      setReportesGenerados(data);
+      console.log(data);
     } catch (error) {
-      console.error(error);
-      // Manejar el error al obtener los reportes generados
+      
     }
   };
   
@@ -75,21 +72,6 @@ const FormReport = () => {
   };
 
   useEffect(() => {
-    // Hacer la solicitud a la API para obtener los reportes generados
-    const fetchReportesGenerados = async () => {
-      try {
-        const response = await axios.get(
-          'https://servertesis-production.up.railway.app/reportes'
-        );
-        if (response.status === 200) {
-          setReportesGenerados(response.data);
-        }
-      } catch (error) {
-        console.error(error);
-        // Manejar el error al obtener los reportes generados
-      }
-    };
-
     fetchReportesGenerados();
   }, []);
 
