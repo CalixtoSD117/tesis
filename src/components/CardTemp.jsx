@@ -5,7 +5,7 @@ const CardTemp = ({ temperature }) => {
   const strokeWidth = 10;
   const circumference = 2 * Math.PI * radius;
   const offset = circumference - (temperature / 100) * circumference;
-  const stroke = temperature >= 30 ? '#EA1239':'#1285EA'
+  const stroke = temperature >= 40 ? '#EA1239':'#1285EA'
   return (
     <div className=' flex flex-col items-center justify-center'>
         {/* <div>
