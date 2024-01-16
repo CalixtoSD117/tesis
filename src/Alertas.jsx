@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { CardBat, CardTemp, Header, Sidebar, TablaAlerts } from "./components";
+import { ToastContainer } from "react-toastify";
 
 const Alertas = () => {
   return (
@@ -48,6 +49,7 @@ const Alertas = () => {
 
         <Outlet />
       </div>
+      <ToastContainer/>
     </div>
   );
 };

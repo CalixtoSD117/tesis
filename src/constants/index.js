@@ -27,26 +27,6 @@ export const contenedor = [
         bateria: "10",
         nombre: 'Devkit 0',
         patio: 'A1'
-    },
-    {
-        id: 'DEV171',
-        ubicacion: 'Manzanillo',
-        estado: 'activo',
-        dispositivo: 'conectado',
-        temperatura: "22",
-        bateria: "50",
-        nombre: 'Devkit 1',
-        patio: 'A2'
-    },
-    {
-        id: 'DEV172',
-        ubicacion: 'Manzanillo',
-        estado: 'activo',
-        dispositivo: 'conectado',
-        temperatura: "10",
-        bateria: "95",
-        nombre: 'Devkit 2',
-        patio: 'A3'
     }
 ]
 

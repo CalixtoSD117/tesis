@@ -38,7 +38,7 @@ const Mapa = () => {
        <Sidebar/>
 
         {/* Header */}
-        <Header title="Mapa"/>
+        <Header title="Cobertura"/>
         {/* Main */}
 
         <main className="lg:pl-[248px] pt-36 md:pt-24 lg:pt-28">

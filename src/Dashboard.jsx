@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import { GoogleMap, Marker, LoadScript,InfoWindow } from "@react-google-maps/api";
 import { CardDash, Header, Sidebar } from "./components";
 import { useState } from "react";
+import CardsDashboard from "./components/CardsDashboard";
 
 
 const Dashboard = () =>
@@ -47,7 +48,9 @@ const Dashboard = () =>
         <main className="lg:pl-[248px] pt-36 md:pt-24 lg:pt-28 ">
           <div className="pl-8 pr-8 lg:flex items-center justify-center gap-12">
 
-            <CardDash />
+            <CardsDashboard data={1} title="Dispositivos" text="Activos"/>
+            <CardsDashboard data={1} title="Contenedores" text="Disponibles"/>
+            <CardsDashboard data={0} title="Dispositivos" text="Inactivos" />
 
           </div>
 
