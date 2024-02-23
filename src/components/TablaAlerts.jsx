@@ -25,7 +25,7 @@ const TablaAlerts = () => {
       }
     };
 
-    const interval = setInterval(fetchData, 5000); // 10 seconds
+    const interval = setInterval(fetchData); // 10 seconds ,2000
 
     return () => clearInterval(interval);
   }, [temperature, userId]);
