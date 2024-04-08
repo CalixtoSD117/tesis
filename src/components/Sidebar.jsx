@@ -45,11 +45,11 @@ const Sidebar = () => {
                             <RiAlertLine/>Alertas y Mas
                         </Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link to="/reportes" className="text-white font-semibold flex items-center gap-4 hover:bg-gray-500 transition-colors py-2 px-4 rounded-lg">
                             <RiArticleLine/>Reportes
                         </Link>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
             {/* Creacion de img abajo  */}
