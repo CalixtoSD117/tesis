@@ -1,4 +1,4 @@
-# 📦 **My React App with Vite**
+# 📦 **My Project with React and Vite**
 
 Welcome to **My React App**, a fast and modern front-end application built using [React.js](https://reactjs.org/) and powered by the lightning-fast [Vite](https://vitejs.dev/).
 
@@ -31,8 +31,7 @@ Follow these steps to get up and running with the project:
 ### 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/username/my-react-app.git
-cd my-react-app
+https://github.com/CalixtoSD117/tesis.git
 ```
 
 ### 2. **Install dependencies**
