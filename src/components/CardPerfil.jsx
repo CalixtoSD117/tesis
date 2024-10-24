@@ -131,9 +131,7 @@ const CardPerfil = () => {
               </label>
             </div>
 
-            <button className="bg-blue-500 shadow-lg text-sm text-white ring-1 ring-blue-500 hover:bg-blue-800 hover:ring-blue-800  rounded-full px-4 py-1 m-2">
-              Editar correo
-            </button>
+            
           </div>
         </div>
       ))}

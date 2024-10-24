@@ -16,7 +16,7 @@ const Loginp = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("https://servertesis-production.up.railway.app/login", {
+      const response = await axios.post("https://servertesis.onrender.com/login", {
         email,
         password,
       });
